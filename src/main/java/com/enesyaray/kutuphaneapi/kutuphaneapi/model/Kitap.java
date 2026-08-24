@@ -1,4 +1,4 @@
-package com.enesyaray.kutuphaneapi.kutuphaneapi.model;
+package com.enesyaray.kutuphaneapi.model;
 
 public class Kitap {
     private Long id;

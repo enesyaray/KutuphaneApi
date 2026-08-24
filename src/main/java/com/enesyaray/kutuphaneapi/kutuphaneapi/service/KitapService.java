@@ -1,6 +1,6 @@
-package com.enesyaray.kutuphaneapi.kutuphaneapi.service;
+package com.enesyaray.kutuphaneapi.service;
 
-import com.enesyaray.kutuphaneapi.kutuphaneapi.model.Kitap;
+import com.enesyaray.kutuphaneapi.model.Kitap;
 import java.util.List;
 import java.util.Optional;
 
