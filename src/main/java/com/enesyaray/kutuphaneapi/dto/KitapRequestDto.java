@@ -17,6 +17,9 @@ public class KitapRequestDto {
     @NotBlank(message = "yazar id olmalı")
     private Long yazarId;
 
+    @NotBlank(message = "isbn alanı boş olamaz")
+    private int isbn;
+
     public String getBaslik() {
         return baslik;
     }
