@@ -1,7 +1,7 @@
-package com.enesyaray.kutuphaneapi.kutuphaneapi.service;
+package com.enesyaray.kutuphaneapi.service;
 
-import com.enesyaray.springdemo1.kutuphaneapi.model.Kitap;
-import com.enesyaray.springdemo1.kutuphaneapi.repository.KitapRepository;
+import com.enesyaray.kutuphaneapi.model.Kitap;
+import com.enesyaray.kutuphaneapi.repository.KitapRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

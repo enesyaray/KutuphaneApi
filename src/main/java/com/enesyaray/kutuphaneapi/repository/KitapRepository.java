@@ -43,6 +43,7 @@ public class KitapRepository {
     }
 
     public boolean sil(Long id) {
+
         return kitapListesi.removeIf(kitap -> kitap.getId().equals(id));
     }
 }

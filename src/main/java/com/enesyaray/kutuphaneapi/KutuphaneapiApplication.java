@@ -1,4 +1,4 @@
-package com.enesyaray.kutuphaneapi.kutuphaneapi;
+package com.enesyaray.kutuphaneapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

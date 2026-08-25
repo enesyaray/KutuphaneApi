@@ -2,11 +2,13 @@ package com.enesyaray.kutuphaneapi.service;
 
 import com.enesyaray.kutuphaneapi.model.Kitap;
 import com.enesyaray.kutuphaneapi.repository.KitapRepository;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Primary
 @Service
 public class KitapServiceImpl implements KitapService {
 
