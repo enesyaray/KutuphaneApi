@@ -18,7 +18,15 @@ public class KitapRequestDto {
     private Long yazarId;
 
     @NotBlank(message = "isbn alanı boş olamaz")
-    private int isbn;
+    private String isbn;
+
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
 
     public String getBaslik() {
         return baslik;
