@@ -32,7 +32,7 @@ public class KitapController {
     @PostMapping
     public ResponseEntity<KitapResponseDto> kitapEkle(@RequestBody Kitap kitap) {
         KitapResponseDto kaydedilen = kitapService.ekle(kitap);
-        return ResponseEntity.status(HttpStatus.CREATED).body(kaydedilen);
+        return ResponseEntity.status(HttpStatus.CREATED).body(kaydedilen);//your
     }
 
     @PutMapping("/{id}")
