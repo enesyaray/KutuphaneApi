@@ -1,5 +1,6 @@
-package com.enesyaray.kutuphaneapi.controller;
+package com.enesyaray.kutuphaneapi.controller.Impl;
 
+import com.enesyaray.kutuphaneapi.dto.KitapResponseDto;
 import com.enesyaray.kutuphaneapi.model.Kitap;
 import com.enesyaray.kutuphaneapi.service.KitapService;
 import org.springframework.http.HttpStatus;
@@ -19,25 +20,23 @@ public class KitapController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Kitap>> tumKitaplariGetir() {
+    public ResponseEntity<List<KitapResponseDto>> tumKitaplariGetir() {
         return ResponseEntity.ok(kitapService.tumKitaplariGetir());
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Kitap> idIleGetir(@PathVariable Long id) {
-        return kitapService.idIleGetir(id)
-                .map(ResponseEntity::ok)
-                .orElseGet(() -> ResponseEntity.status(HttpStatus.NOT_FOUND).build());
+    public ResponseEntity<KitapResponseDto> idIleGetir(@PathVariable Long id) {
+        return ResponseEntity.ok(kitapService.idIleGetir(id));
     }
 
     @PostMapping
-    public ResponseEntity<Kitap> kitapEkle(@RequestBody Kitap kitap) {
-        Kitap kaydedilen = kitapService.ekle(kitap);
+    public ResponseEntity<KitapResponseDto> kitapEkle(@RequestBody Kitap kitap) {
+        KitapResponseDto kaydedilen = kitapService.ekle(kitap);
         return ResponseEntity.status(HttpStatus.CREATED).body(kaydedilen);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Kitap> kitapGuncelle(@PathVariable Long id, @RequestBody Kitap kitap) {
+    public ResponseEntity<KitapResponseDto> kitapGuncelle(@PathVariable Long id, @RequestBody Kitap kitap) {
         return kitapService.guncelle(id, kitap)
                 .map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.status(HttpStatus.NOT_FOUND).build());
